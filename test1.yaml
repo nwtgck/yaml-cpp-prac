@@ -1,7 +1,22 @@
+# (from: http://pixar.wikia.com/wiki/Pixar_Wiki)
 given_name:  Bob
 family_name: Parr
 age: null
 children:
-  - Violet
-  - Dash
-  - Jack-Jack
+  # Violet
+  - given_name:  Violet
+    family_name: Parr
+    age:         null
+    children:    []
+
+  # Dash
+  - given_name:  Dash
+    family_name: Parr
+    age:         10
+    children:    []
+
+  # Jack-Jack
+  - given_name:  Jack-Jack
+    family_name: Parr
+    age:         1
+    children:    []
