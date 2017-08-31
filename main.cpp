@@ -6,7 +6,15 @@
 
 using std::string;
 
+void load_test1_yaml();
+
 int main(int argc, char* argv[]){
+  load_test1_yaml();
+  return 0;
+}
+
+
+void load_test1_yaml(){
   YAML::Node test1_yaml = YAML::LoadFile("test1.yaml");
   std::cout << test1_yaml << std::endl;
   // =>
@@ -41,6 +49,4 @@ int main(int argc, char* argv[]){
   // Bob
   // Violet
   // 1
-
-  return 0;
 }
