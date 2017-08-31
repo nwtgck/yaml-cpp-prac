@@ -7,9 +7,15 @@
 using std::string;
 
 void load_test1_yaml();
+void load_test2_yaml();
 
 int main(int argc, char* argv[]){
-  load_test1_yaml();
+  if(false) {
+    load_test1_yaml();
+  }
+  if(true){
+    load_test2_yaml();
+  }
   return 0;
 }
 
@@ -49,4 +55,25 @@ void load_test1_yaml(){
   // Bob
   // Violet
   // 1
+}
+
+
+void load_test2_yaml(){
+  YAML::Node test2_yaml = YAML::LoadFile("test2.yaml");
+
+  // Convert YAML::Node to std::map<>
+  std::map<int, string> test2_map = test2_yaml.as< std::map<int, string> >();
+
+
+  // Show keys and values
+  // (from: https://stackoverflow.com/a/1443798)
+  for(std::map<int,string>::iterator iter = test2_map.begin(); iter != test2_map.end(); ++iter){
+    std::cout << "key: " << iter->first << ", " << "value: " << iter->second << std::endl;
+  }
+  // =>
+  // key: 1, value: apple
+  // key: 2, value: orange
+  // key: 3, value: melon
+  // key: 4, value: grape
+
 }
